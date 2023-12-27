@@ -12,8 +12,8 @@ export default function App() {
       {/* <Login /> */}
       {/* <Register /> */}
       {/* <ShopMain /> */}
-      {/* <ShopCategory title='Home Kit' itemList={HomeKit}/> */}
-      <ShopItem title="Home Kit" item={HomeKit[0]} />
+      <ShopCategory title='Home Kit' itemList={HomeKit}/>
+      {/* <ShopItem title="Home Kit" item={HomeKit[0]} /> */}
     </div>
   );
 }

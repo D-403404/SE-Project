@@ -7,7 +7,7 @@ import Breadcrumb from "./Breadcrumb";
 export default function ShopCategory({ title, itemList }) {
   const historyNav = ["Main", title];
   return (
-    <div className="/h-[1537px] /w-[1280px]">
+    <div className="/h-[1537px] /w-[1280px] overflow-hidden">
       <Navbar />
       <div className="h-[60.09px]"></div>
       <div className="/h-[20vh] w-full /overflow-hidden relative">
@@ -19,24 +19,31 @@ export default function ShopCategory({ title, itemList }) {
         </div>
       </div>
       <Breadcrumb history={historyNav} />
-      <div className="pt-[3vw]">
-        <div className="flex flex-wrap justify-around">
+      {/* <div className="flex /justify-center /w-[100vw] /ml-[2vw] /mr-[2vw]"> */}
+      <div className="flex flex-wrap justify-center w-[100vw] /w-[90vw] /pt-[3vw] /ml-[5vw] /mr-[5vw] /w-fit overflow-hidden relative">
+        <div className="flex flex-wrap w-[96vw] /justify-center ml-[-5vw] mr-[-5vw]">
           {itemList.map((item) => (
-            <button
-              key={item.id}
-              className="flex /aspect-[4/5] h-[17.5vw] w-[14vw] /mt-[3vw] mb-[10vw] ml-[5vw] mr-[5vw] shadow hover:shadow-xl transform hover:scale-110 active:mt-[5px] active:mb-[5vw] active:shadow"
-            >
-              <img src={item.image} alt="itemImage" />
-              <div className="flex flex-col justify-between items-start h-[22%] w-full pl-[10px] pr-[10px] absolute bottom-0 bg-black bg-opacity-20 active:mt-[5px]">
-                <div className="text-[1.4vw] font-bold text-white group-hover">
-                  {item.name}
-                </div>
-                <div className="text-[1.1vw] text-white">${item.price}</div>
+            <div className="wrapper" key={item.id}>
+              <div className="content">
+                <button className="flex /aspect-[4/5] /h-[17.5vw] w-[14vw] mt-[5vw] mb-[5vw] ml-[5vw] mr-[5vw] shadow hover:shadow-xl transform hover:scale-110 active:mt-[6vw] active:mb-[5vw] active:shadow">
+                  <img src={item.image} alt="itemImage" />
+                  <div className="flex flex-col justify-between items-start h-[22%] w-full pl-[10px] pr-[10px] absolute bottom-0 bg-black bg-opacity-20 active:mt-[5px]">
+                    <div className="text-[1.4vw] font-bold text-white group-hover">
+                      {item.name}
+                    </div>
+                    <div className="text-[1.1vw] text-white">${item.price}</div>
+                  </div>
+                </button>
               </div>
-            </button>
+              <div className="divisor"></div>
+            </div>
           ))}
         </div>
+        <div className="h-[100vw] w-[7vw] absolute top-0 /bottom-0 left-0 bg-white z-30"></div>
+        <div className="h-[100vw] w-[7vw] absolute top-0 right-0 bg-white z-30"></div>
+        <div className="test"></div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

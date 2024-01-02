@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
-import "./index.module.css"
+import "/src/index.css";
 
 export default function Register() {
   return (
@@ -68,34 +68,34 @@ class RegisterForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     if (this.validate()) {
-        console.log("You created a new account!");
-        console.log(
-          "User info:\n" +
-            "First name: " +
-            this.state.input.fName +
-            "\n" +
-            "Last name: " +
-            this.state.input.lName +
-            "\n" +
-            "DoB: " +
-            this.state.input.dob +
-            "\n" +
-            "Gender: " +
-            this.state.input.gender +
-            "\n" +
-            "Email: " +
-            this.state.input.email +
-            "\n" +
-            "Phone: " +
-            this.state.input.phone +
-            "\n" +
-            "Address: " +
-            this.state.input.addr +
-            "\n" +
-            "Password: " +
-            this.state.input.password +
-            "\n"
-        );
+      console.log("You created a new account!");
+      console.log(
+        "User info:\n" +
+          "First name: " +
+          this.state.input.fName +
+          "\n" +
+          "Last name: " +
+          this.state.input.lName +
+          "\n" +
+          "DoB: " +
+          this.state.input.dob +
+          "\n" +
+          "Gender: " +
+          this.state.input.gender +
+          "\n" +
+          "Email: " +
+          this.state.input.email +
+          "\n" +
+          "Phone: " +
+          this.state.input.phone +
+          "\n" +
+          "Address: " +
+          this.state.input.addr +
+          "\n" +
+          "Password: " +
+          this.state.input.password +
+          "\n"
+      );
     }
   }
 
@@ -118,11 +118,11 @@ class RegisterForm extends React.Component {
   }
 
   render() {
-    const genderOptions = [
-      { value: "Male", label: "Male" },
-      { value: "Female", label: "Female" },
-      { value: "None", label: "Prefer not to say" },
-    ];
+    // const genderOptions = [
+    //   { value: "Male", label: "Male" },
+    //   { value: "Female", label: "Female" },
+    //   { value: "None", label: "Prefer not to say" },
+    // ];
 
     // const style = {
     //     control: base => ({
@@ -258,7 +258,9 @@ class RegisterForm extends React.Component {
             onChange={this.handleChange}
             required
           ></input>
-          <div className="text-danger text-red-600">{this.state.errors.password}</div>
+          <div className="text-danger text-red-600">
+            {this.state.errors.password}
+          </div>
         </div>
         <div className="flex justify-center /pt-[30px] pb-[30px]">
           <button

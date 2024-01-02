@@ -3,6 +3,7 @@ import Register from "./components/Register";
 import ShopCategory from "./components/ShopCategory";
 import ShopMain from "./components/ShopMain";
 import HomeKit from "./components/data/HomeKit";
+import ShipmentOption from "./components/user/ShipmentOption";
 import ShopItem from "./components/user/ShopItem";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       {/* <ShopMain /> */}
       <ShopCategory title='Home Kit' itemList={HomeKit}/>
       {/* <ShopItem title="Home Kit" item={HomeKit[0]} /> */}
+      {/* <ShipmentOption title='Home Kit' /> */}
     </div>
   );
 }

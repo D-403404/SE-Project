@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Breadcrumb from "../Breadcrumb";
 import ShirtImg from "/src/assets/shirt_placeholder.png";
 import PropTypes from "prop-types";
-import "../index.module.css";
+import "/src/index.css";
 
 export default function ShopItem({ title, item }) {
   const historyNav = ["Main", title, "Details"];
